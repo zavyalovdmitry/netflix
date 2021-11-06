@@ -21,6 +21,7 @@
     "jest": true
   },
   "rules": {
+    "react/prop-types": ["off"],
     "react-hooks/rules-of-hooks": "error",
     "no-debugger": 0,
     "no-alert": 0,
@@ -47,6 +48,7 @@
         "props": false
       }
     ],
+    "no-nested-ternary": 0,
     "no-console": 0,
     "import/prefer-default-export": 1,
     "import": 0,
@@ -88,9 +90,10 @@
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "all",
+        "trailingComma": "none",
         "singleQuote": true,
-        "printWidth": 100
+        "printWidth": 80,
+        "endOfLine":"auto"
       }
     ],
     "jsx-a11y/href-no-hash": "off",
