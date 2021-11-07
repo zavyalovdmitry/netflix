@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import React from 'react';
 import {
   Container,
@@ -7,7 +6,7 @@ import {
   SubTitle,
   Image,
   Item,
-  Inner
+  Inner,
 } from './styles/jumbotron';
 
 export default function Jumbotron({
@@ -16,8 +15,8 @@ export default function Jumbotron({
   ...restProps
 }) {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item {...restProps}>
+      <Inner direction={direction}>{children}</Inner>
     </Item>
   );
 }

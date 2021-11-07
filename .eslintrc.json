@@ -1,9 +1,7 @@
 {
   "extends": [
     "airbnb",
-    "prettier",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended"
+    "prettier"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -21,11 +19,13 @@
     "jest": true
   },
   "rules": {
-    "react/prop-types": ["off"],
+    "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "no-debugger": 0,
     "no-alert": 0,
-    "no-unused-vars": 1,
+    "no-unused-vars": [
+      1
+    ],
     "prefer-const": [
       "error",
       {
@@ -48,13 +48,13 @@
         "props": false
       }
     ],
-    "no-nested-ternary": 0,
     "no-console": 0,
-    "import/prefer-default-export": 1,
+    "import/prefer-default-export": 0,
     "import": 0,
     "func-names": 0,
     "space-before-function-paren": 0,
     "comma-dangle": 0,
+    "class-methods-use-this": 0,
     "max-len": 0,
     "import/extensions": 0,
     "no-underscore-dangle": 0,
@@ -64,10 +64,11 @@
     "react/react-in-jsx-scope": 0,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
-    "react/jsx-props-no-spreading": 0,
     "react/no-unescaped-entities": 0,
+    "jsx-a11y/media-has-caption": 0,
     "jsx-a11y/accessible-emoji": 0,
     "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/jsx-filename-extension": [
       1,
       {
@@ -78,7 +79,20 @@
       }
     ],
     "radix": 0,
-    "no-shadow": "off",
+    "no-shadow": [
+      2,
+      {
+        "hoist": "all",
+        "allow": [
+          "resolve",
+          "reject",
+          "done",
+          "next",
+          "err",
+          "error"
+        ]
+      }
+    ],
     "quotes": [
       2,
       "single",
@@ -90,10 +104,10 @@
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "none",
+        "endOfLine":"auto",
+        "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
-        "endOfLine":"auto"
+        "printWidth": 80
       }
     ],
     "jsx-a11y/href-no-hash": "off",

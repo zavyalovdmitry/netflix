@@ -1,19 +1,11 @@
 import styled from 'styled-components/macro';
 /* macro is to give readable names to components */
 
-export const Item = styled.div`
-  display: flex;
-  border-bottom: 8px solid #222;
-  padding: 50px 5%;
-  color: white;
-  overflow: hidden;
-`;
-
 export const Inner = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
+  flex-direction: ${({ direction }) => direction};
   max-width: 1100px;
   margin: auto;
   width: 100%;
@@ -23,12 +15,10 @@ export const Inner = styled.div`
   }
 `;
 
-export const Container = styled.div``;
-
 export const Pane = styled.div`
   width: 50%;
 
-  @nedia (max-width: 1000px) {
+  @media (max-width: 1000px) {
     width: 100%;
     padding: 0 45px;
     text-align: center;
@@ -58,4 +48,20 @@ export const SubTitle = styled.h2`
 export const Image = styled.img`
   max-width: 100%;
   height: auto;
+`;
+
+export const Item = styled.div`
+  display: flex;
+  border-bottom: 8px solid #222;
+  padding: 50px 5%;
+  color: white;
+  overflow: hidden;
+`;
+
+export const Container = styled.div`
+  @media (max-width: 1000px) {
+    ${Item}:last-of-type h2 {
+      margin-bottom: 50px;
+    }
+  }
 `;
