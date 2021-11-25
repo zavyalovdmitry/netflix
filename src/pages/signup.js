@@ -8,7 +8,7 @@ import * as ROUTES from '../constants/routes';
 
 export default function Signup() {
   const history = useHistory();
-  const { Firebase } = useContext(FirebaseContext);
+  const { firebase } = useContext(FirebaseContext);
 
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
@@ -19,6 +19,26 @@ export default function Signup() {
 
   const handleSignUp = (event) => {
     event.preventDefault();
+
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(emailAddress, password)
+      .then((result) =>
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            photoURL: Math.floor(Math.random() * 5) + 1,
+          })
+          .then(() => {
+            history.push(ROUTES.BROWSE);
+          })
+      )
+      .catch((error) => {
+        setFirstName('');
+        setEmailAddress('');
+        setPassword('');
+        setError(error.message);
+      });
   };
 
   return (
