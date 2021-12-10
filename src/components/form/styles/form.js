@@ -60,6 +60,15 @@ export const Link = styled(ReactRouterLink)`
   }
 `;
 
+export const LinkOut = styled.a`
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const Input = styled.input`
   background: #333;
   border-radius: 4px;

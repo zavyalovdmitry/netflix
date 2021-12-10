@@ -9,6 +9,7 @@ import {
   Link,
   Input,
   Submit,
+  LinkOut,
 } from './styles/form';
 
 export default function Form({ children, ...restProps }) {
@@ -37,6 +38,10 @@ Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
 
 Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
+};
+
+Form.LinkOut = function FormLinkOut({ children, ...restProps }) {
+  return <LinkOut {...restProps}>{children}</LinkOut>;
 };
 
 Form.Input = function FormInput({ children, ...restProps }) {

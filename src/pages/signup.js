@@ -76,9 +76,9 @@ export default function Signup() {
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA to ensure you are not a
               bot.{' '}
-              <Form.Link to="https://support.google.com/recaptcha/?hl=en">
+              <Form.LinkOut href="https://support.google.com/recaptcha/?hl=en">
                 Learn more.
-              </Form.Link>
+              </Form.LinkOut>
             </Form.TextSmall>
           </Form.Base>
         </Form>

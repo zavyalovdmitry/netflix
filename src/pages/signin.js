@@ -57,15 +57,15 @@ export default function Signin() {
           </Form.Base>
 
           <Form.Text>
-            New to Netflix?{' '}
-            <Form.Link to={ROUTES.SIGN_UP}>Sign up now.</Form.Link>
+            Use login user@test.com and password 123456 or{' '}
+            <Form.Link to={ROUTES.SIGN_UP}>sign up now.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you are not a
             bot.{' '}
-            <Form.Link to="https://support.google.com/recaptcha/?hl=en">
+            <Form.LinkOut href="https://support.google.com/recaptcha/?hl=en">
               Learn more.
-            </Form.Link>
+            </Form.LinkOut>
           </Form.TextSmall>
         </Form>
       </HeaderContainer>
