@@ -3,13 +3,20 @@ import 'firebase/firestore';
 import 'firebase/auth';
 // import { seedDatabase } from '../seed';
 
+const apiKey = process.env.REACT_APP_API_KEY;
+const authDomain = process.env.REACT_APP_AUTH_DOMAIN;
+const projectId = process.env.REACT_APP_PROJECT_ID;
+const storageBucket = process.env.REACT_APP_STORAGE_BUCKET;
+const messagingSenderId = process.env.REACT_APP_MESSAGING_SENDER_ID;
+const appId = process.env.REACT_APP_APP_ID;
+
 const config = {
-  apiKey: 'AIzaSyD516dl_aG40jagxqkqsb4GO6ixMHGDVW0',
-  authDomain: 'netflix-zd.firebaseapp.com',
-  projectId: 'netflix-zd',
-  storageBucket: 'netflix-zd.appspot.com',
-  messagingSenderId: '627152350536',
-  appId: '1:627152350536:web:f9e96d0431bdd88903d77d',
+  apiKey,
+  authDomain,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
 };
 
 const firebase = Firebase.initializeApp(config);
